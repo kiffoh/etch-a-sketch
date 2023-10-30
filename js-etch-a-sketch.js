@@ -38,7 +38,10 @@ function createDivs(m=4) {
             childDiv.style.backgroundColor = "pink"
 
             childDiv.addEventListener("mouseover", function() {
-                childDiv.style.backgroundColor = "blue"
+                r = Math.round(Math.random() * 255);
+                g = Math.round(Math.random() * 255);
+                b = Math.round(Math.random() * 255);
+                childDiv.style.backgroundColor = `rgb(${r},${g},${b})`;
             })
             childDiv.addEventListener("mouseout", function() {
                 childDiv.style.backgroundColor = "pink"
